@@ -6,7 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2A08F748FA79C4A0456C1417 /* Pods_NewsApp8ass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D489E1CD958AC9D442C7B94 /* Pods_NewsApp8ass.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		05521399E910C5CF12FE80DD /* Pods-NewsApp8ass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp8ass.release.xcconfig"; path = "Target Support Files/Pods-NewsApp8ass/Pods-NewsApp8ass.release.xcconfig"; sourceTree = "<group>"; };
+		0D489E1CD958AC9D442C7B94 /* Pods_NewsApp8ass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsApp8ass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20F27EEE75B94C1D0B4655A6 /* Pods-NewsApp8ass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp8ass.debug.xcconfig"; path = "Target Support Files/Pods-NewsApp8ass/Pods-NewsApp8ass.debug.xcconfig"; sourceTree = "<group>"; };
 		B8BCB0D32CF1EF4F000498BD /* NewsApp8ass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp8ass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -36,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A08F748FA79C4A0456C1417 /* Pods_NewsApp8ass.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A71FBA228B1D1B6BA5D9BFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D489E1CD958AC9D442C7B94 /* Pods_NewsApp8ass.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		668AC5DE065AF8F16DF9E25C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20F27EEE75B94C1D0B4655A6 /* Pods-NewsApp8ass.debug.xcconfig */,
+				05521399E910C5CF12FE80DD /* Pods-NewsApp8ass.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B8BCB0CA2CF1EF4F000498BD = {
 			isa = PBXGroup;
 			children = (
 				B8BCB0D52CF1EF4F000498BD /* NewsApp8ass */,
 				B8BCB0D42CF1EF4F000498BD /* Products */,
+				668AC5DE065AF8F16DF9E25C /* Pods */,
+				4A71FBA228B1D1B6BA5D9BFA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,9 +92,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8BCB0E62CF1EF51000498BD /* Build configuration list for PBXNativeTarget "NewsApp8ass" */;
 			buildPhases = (
+				CA7F145FAC83804BED0F1D9F /* [CP] Check Pods Manifest.lock */,
 				B8BCB0CF2CF1EF4F000498BD /* Sources */,
 				B8BCB0D02CF1EF4F000498BD /* Frameworks */,
 				B8BCB0D12CF1EF4F000498BD /* Resources */,
+				8DF9878F833C82917F0624D3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +106,6 @@
 				B8BCB0D52CF1EF4F000498BD /* NewsApp8ass */,
 			);
 			name = NewsApp8ass;
-			packageProductDependencies = (
-			);
 			productName = NewsApp8ass;
 			productReference = B8BCB0D32CF1EF4F000498BD /* NewsApp8ass.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +154,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8DF9878F833C82917F0624D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NewsApp8ass/Pods-NewsApp8ass-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NewsApp8ass/Pods-NewsApp8ass-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NewsApp8ass/Pods-NewsApp8ass-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA7F145FAC83804BED0F1D9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NewsApp8ass-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B8BCB0CF2CF1EF4F000498BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +209,7 @@
 /* Begin XCBuildConfiguration section */
 		B8BCB0E72CF1EF51000498BD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20F27EEE75B94C1D0B4655A6 /* Pods-NewsApp8ass.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -167,6 +237,7 @@
 		};
 		B8BCB0E82CF1EF51000498BD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05521399E910C5CF12FE80DD /* Pods-NewsApp8ass.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -229,7 +300,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -292,7 +363,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
